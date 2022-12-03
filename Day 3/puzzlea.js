@@ -26,4 +26,5 @@ for (let i = 0; i < puzzleArray.length; i++) {
         }
     }
 }
+
 console.log(result);

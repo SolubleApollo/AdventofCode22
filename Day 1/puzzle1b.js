@@ -4,8 +4,6 @@ const puzzle1 = fs.readFileSync('puzzle1.txt', 'utf8');
 
 // turn puzzle1 into an array of numbers (integers) spliting on new line
 const puzzle1Array = puzzle1.split('\n').map(Number);
-//turn puzzle1Array into an array of integers instead of strings
-
 
 //for each value in puzzle1Array add it to a total sum unless there is an empty value
 let total = [];

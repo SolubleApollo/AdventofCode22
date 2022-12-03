@@ -15,4 +15,5 @@ puzzle1Array.forEach((value) => {
         runningTotal = parseInt(value, 10) + runningTotal;
     }
 });
+
 console.log(total);

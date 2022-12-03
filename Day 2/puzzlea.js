@@ -36,5 +36,5 @@ puzzle1Array.forEach((value) => {
     }
 
 });
-console.log(score);
 
+console.log(score);
