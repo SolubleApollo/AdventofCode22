@@ -6,6 +6,4 @@ const puzzleArray = puzzle.split('\n');
 let result = 0;
 
 
-
-
 console.log(result);
