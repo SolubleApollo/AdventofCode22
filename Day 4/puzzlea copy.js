@@ -10,9 +10,9 @@ for (let i = 0; i < puzzleArray.length; i++) {
     let splitString = puzzleArray[i].split(",");
     let x = splitString[0].split("-");
     let y = splitString[1].split("-");
-    if (x[0] <= y[0] && x[1] >= y[1]) {
+    if (x[0] <= y[1] && x[1] >= y[0]) {
         result++;
-    } else if (x[0] >= y[0] && x[1] <= y[1]) {
+    } else if (x[0] >= y[1] && x[1] <= y[0]) {
         result++;
     }
 }
