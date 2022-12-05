@@ -32,26 +32,26 @@ for (let i = 0; i < puzzleArray.length; i++) {
     } else if (!breakpoint) {
         splitboxes(boxes);
     }
-    if (i == puzzleArray.length - 1) {
-        for (let i = 0; i < positions.length; i++) {
-            let from,
-                to = [];
-            let value = [];
-            let count = parseInt(positions[i][1]);
+}
 
-            from = tool[parseInt(positions[i][3]) - 1];
-            to = tool[parseInt(positions[i][5]) - 1];
-            for (let j = 0; j < count; j++) {
-                value.push(from.shift());
-            }
-            to = value.concat(to);
-            tool[parseInt(positions[i][3]) - 1] = from;
-            tool[parseInt(positions[i][5]) - 1] = to;
-        }
-        for (let i = 0; i < tool.length; i++) {
-            result = result + tool[i][0];
-        }
+for (let i = 0; i < positions.length; i++) {
+    let from,
+        to,
+        value = [];
+    let count = parseInt(positions[i][1]);
+
+    from = tool[parseInt(positions[i][3]) - 1];
+    to = tool[parseInt(positions[i][5]) - 1];
+
+    for (let j = 0; j < count; j++) {
+        value.push(from.shift());
     }
+    to = value.concat(to);
+    tool[parseInt(positions[i][3]) - 1] = from;
+    tool[parseInt(positions[i][5]) - 1] = to;
+}
+for (let i = 0; i < tool.length; i++) {
+    result = result + tool[i][0];
 }
 
 function splitboxes(boxes) {
@@ -122,8 +122,6 @@ function splitboxes(boxes) {
             j--;
         }
     }
-
-    console.log(box1, box2, box3, box4, box5, box6, box7, box8, box9);
 
     tool = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
 }
